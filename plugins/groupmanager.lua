@@ -635,14 +635,14 @@ local lock_link = data[tostring(target)]["settings"]["lock_link"]
 if not lang then
 return "🔓*Link* _Posting Is Not Locked_🔓" 
 elseif lang then
-return "🔓ارسال لینک در گروه ممنوع نمیباشد🔓"
+return "🔓ارسال لینک ممنوع شد🔓"
 end
 else 
 data[tostring(target)]["settings"]["lock_link"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "🔓*Link* _Posting Has Been Unlocked_🔓" 
 else
-return "🔓ارسال لینک در گروه آزاد شد🔓"
+return "🔓ارسال لینک آزاد شد🔓"
 end
 end
 end
@@ -666,7 +666,7 @@ if lock_fosh == "yes" then
 if not lang then
  return "🔒*Fosh* _Posting Is Already Locked_🔒"
 elseif lang then
- return "🔒قفل فحش فعال است🔒"
+ return "🔒حرف بی تربیت ها فعال شد🔒"
 end
 else
 data[tostring(target)]["settings"]["lock_fosh"] = "yes"
@@ -674,7 +674,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "🔒*Fosh* _ Has Been Locked_🔒"
 else
- return "🔒قفل فحش فعال شد🔒"
+ return "🔒حرف بی تربیت ها فعال شد🔒"
 end
 end
 end
@@ -724,7 +724,7 @@ if lock_tag == "yes" then
 if not lang then
  return "🔒*Tag* _Posting Is Already Locked_🔒"
 elseif lang then
- return "🔒ارسال تگ در گروه هم اکنون ممنوع است🔒"
+ return "🔒ارسال تگ  ممنوع شد🔒"
 end
 else
  data[tostring(target)]["settings"]["lock_tag"] = "yes"
@@ -732,7 +732,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "🔒*Tag* _Posting Has Been Locked_🔒"
 else
- return "🔒ارسال تگ در گروه ممنوع شد🔒"
+ return "🔒ارسال تگ  ممنوع شد🔒"
 end
 end
 end
@@ -753,14 +753,14 @@ local lock_tag = data[tostring(target)]["settings"]["lock_tag"]
 if not lang then
 return "🔓*Tag* _Posting Is Not Locked_🔓" 
 elseif lang then
-return "🔓ارسال تگ در گروه ممنوع نمیباشد🔓"
+return "🔓 تگ ممنوع نمیباشد🔓"
 end
 else 
 data[tostring(target)]["settings"]["lock_tag"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "🔓*Tag* _Posting Has Been Unlocked_🔓" 
 else
-return "🔓ارسال تگ در گروه آزاد شد🔓"
+return "🔓ارسال تگ آزاد شد🔓"
 end
 end
 end
@@ -782,7 +782,7 @@ if lock_mention == "yes" then
 if not lang then
  return "🔒*Mention* _Posting Is Already Locked_🔒"
 elseif lang then
- return "🔒ارسال فراخوانی افراد هم اکنون ممنوع است🔒"
+ return "🔒ارسال فراخوانی ممنوع است🔒"
 end
 else
  data[tostring(target)]["settings"]["lock_mention"] = "yes"
@@ -790,7 +790,7 @@ save_data(_config.moderation.data, data)
 if not lang then 
  return "🔒*Mention* _Posting Has Been Locked_🔒"
 else 
- return "🔒ارسال فراخوانی افراد در گروه ممنوع شد🔒"
+ return "🔒ارسال فراخوانی ممنوع شد🔒"
 end
 end
 end
@@ -811,14 +811,14 @@ local lock_mention = data[tostring(target)]["settings"]["lock_mention"]
 if not lang then
 return "🔓*Mention* _Posting Is Not Locked_🔓" 
 elseif lang then
-return "🔓ارسال فراخوانی افراد در گروه ممنوع نمیباشد🔓"
+return "🔓ارسال فراخوانی ممنوع نمیباشد🔓"
 end
 else 
 data[tostring(target)]["settings"]["lock_mention"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "🔓*Mention* _Posting Has Been Unlocked_🔓" 
 else
-return "🔓ارسال فراخوانی افراد در گروه آزاد شد🔓"
+return "🔓ارسال فراخوانی آزاد شد🔓"
 end
 end
 end
@@ -898,7 +898,7 @@ if lock_edit == "yes" then
 if not lang then
  return "🔒*Editing* _Is Already Locked_🔒"
 elseif lang then
- return "🔒ویرایش پیام هم اکنون ممنوع است🔒"
+ return "🔒ویرایش پیام ممنوع است🔒"
 end
 else
  data[tostring(target)]["settings"]["lock_edit"] = "yes"
@@ -906,7 +906,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "🔒*Editing* _Has Been Locked_🔒"
 else
- return "🔒ویرایش پیام در گروه ممنوع شد🔒"
+ return "🔒ویرایش پیام ممنوع شد🔒"
 end
 end
 end
@@ -956,7 +956,7 @@ if lock_spam == "yes" then
 if not lang then
  return "🔒*Spam* _Is Already Locked_🔒"
 elseif lang then
- return "🔒ارسال هرزنامه در گروه هم اکنون ممنوع است🔒"
+ return "🔒ارسال هرزنامه ممنوع است🔒"
 end
 else
  data[tostring(target)]["settings"]["lock_spam"] = "yes"
@@ -964,7 +964,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "🔒*Spam* _Has Been Locked_🔒"
 else
- return "🔒ارسال هرزنامه در گروه ممنوع شد🔒"
+ return "🔒ارسال هرزنامه ممنوع شد🔒"
 end
 end
 end
@@ -985,14 +985,14 @@ local lock_spam = data[tostring(target)]["settings"]["lock_spam"]
 if not lang then
 return "🔓*Spam* _Posting Is Not Locked_🔓" 
 elseif lang then
- return "🔓ارسال هرزنامه در گروه ممنوع نمیباشد🔓"
+ return "🔓ارسال هرزنامه ممنوع نمیباشد🔓"
 end
 else 
 data[tostring(target)]["settings"]["lock_spam"] = "no" save_data(_config.moderation.data, data)
 if not lang then 
 return "🔓*Spam* _Posting Has Been Unlocked_🔓" 
 else
- return "🔓ارسال هرزنامه در گروه آزاد شد🔓"
+ return "🔓ارسال هرزنامه آزاد شد🔓"
 end
 end
 end
@@ -1014,7 +1014,7 @@ if lock_flood == "yes" then
 if not lang then
  return "🔒*Flooding* _Is Already Locked_🔒"
 elseif lang then
- return "🔒ارسال پیام مکرر در گروه هم اکنون ممنوع است🔒"
+ return "🔒ارسال پیام مکررممنوع است🔒"
 end
 else
  data[tostring(target)]["settings"]["flood"] = "yes"
@@ -1022,7 +1022,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "🔒*Flooding* _Has Been Locked_🔒"
 else
- return "🔒ارسال پیام مکرر در گروه ممنوع شد🔒"
+ return "🔒ارسال پیام مکررممنوع شد🔒"
 end
 end
 end
@@ -1043,14 +1043,14 @@ local lock_flood = data[tostring(target)]["settings"]["flood"]
 if not lang then
 return "🔓*Flooding* _Is Not Locked_🔓" 
 elseif lang then
-return "🔓ارسال پیام مکرر در گروه ممنوع نمیباشد🔓"
+return "🔓ارسال پیام مکررممنوع نمیباشد🔓"
 end
 else 
 data[tostring(target)]["settings"]["flood"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "🔓*Flooding* _Has Been Unlocked_🔓" 
 else
-return "🔓ارسال پیام مکرر در گروه آزاد شد🔓"
+return "🔓ارسال پیام مکررآزاد شد🔓"
 end
 end
 end
@@ -1072,7 +1072,7 @@ if lock_bots == "yes" then
 if not lang then
  return "🔒*Bots* _Protection Is Already Enabled_🔒"
 elseif lang then
- return "🔒محافظت از گروه در برابر ربات ها هم اکنون فعال است🔒"
+ return "🔒ربات  فعال شد🔒"
 end
 else
  data[tostring(target)]["settings"]["lock_bots"] = "yes"
@@ -1080,7 +1080,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "🔒*Bots* _Protection Has Been Enabled_🔒"
 else
- return "🔒محافظت از گروه در برابر ربات ها فعال شد🔒"
+ return "🔒ربات ها فعال شد🔒"
 end
 end
 end
@@ -1101,14 +1101,14 @@ local lock_bots = data[tostring(target)]["settings"]["lock_bots"]
 if not lang then
 return "🔓*Bots* _Protection Is Not Enabled_🔓" 
 elseif lang then
-return "🔓محافظت از گروه در برابر ربات ها غیر فعال است🔓"
+return "🔓 ربات هاغیر فعال است🔓"
 end
 else 
 data[tostring(target)]["settings"]["lock_bots"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "🔓*Bots* _Protection Has Been Disabled_🔓" 
 else
-return "🔓محافظت از گروه در برابر ربات ها غیر فعال شد🔓"
+return "🔓 ربات ها غیر فعال شد🔓"
 end
 end
 end
@@ -1188,7 +1188,7 @@ if lock_webpage == "yes" then
 if not lang then
  return "🔒*Webpage* _Is Already Locked_🔒"
 elseif lang then
- return "🔒ارسال صفحات وب در گروه هم اکنون ممنوع است🔒"
+ return "🔒 صفحات وب  ممنوع است🔒"
 end
 else
  data[tostring(target)]["settings"]["lock_webpage"] = "yes"
@@ -1196,7 +1196,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "🔒*Webpage* _Has Been Locked_🔒"
 else
- return "🔒ارسال صفحات وب در گروه ممنوع شد🔒"
+ return "🔒صفحات وب در گروه ممنوع شد🔒"
 end
 end
 end
@@ -1217,7 +1217,7 @@ local lock_webpage = data[tostring(target)]["settings"]["lock_webpage"]
 if not lang then
 return "🔓*Webpage* _Is Not Locked_🔓" 
 elseif lang then
-return "🔓ارسال صفحات وب در گروه ممنوع نمیباشد🔓"
+return "🔓ارسال صفحات وب نمیباشد🔓"
 end
 else 
 data[tostring(target)]["settings"]["lock_webpage"] = "no"
@@ -1225,7 +1225,7 @@ save_data(_config.moderation.data, data)
 if not lang then
 return "🔓*Webpage* _Has Been Unlocked_🔓" 
 else
-return "🔓ارسال صفحات وب در گروه آزاد شد🔓"
+return "🔓ارسال صفحات وب آزاد شد🔓"
 end
 end
 end
@@ -1446,7 +1446,7 @@ data[tostring(target)]["settings"]["mute_all"] = "yes"
 if not lang then
 return "🔇*Mute All* _Has Been Enabled_🔇" 
 else
-return "🔇بیصدا کردن همه فعال شد🔇"
+return "🔇بیصدا کردن فعال شد🔇"
 end
 end
 end
@@ -3002,20 +3002,20 @@ _You Can Use_ *[!/#]* _To Run The Commands_
 elseif lang then
 text = [[
 
-📝 برای دیدن دستورات مورد نظر خود مورد دلخواه را ارسال کنید :
+📝  دستورات به سه دسته تقسیم می باشد برای مشاهده یکی رو اتنخاب کنید :
 
 👽  دستورات  👽
 
-🔰 برای مشاهده دستورات مدیریتی دستور زیر را ارسال کنید
+🔰 دستورات مدیریتی 
 #مدیریت
 
-🔐برای مشاهده دستورات قفلی دستور زیر را ارسال کنید
+🔐دستورات قفلی 
 #قفل
 
-🔇برای مشاهده دستورات ممنوعیت دستور زیر را ارسال کنید
+🔇دستورات ممنوعیت
 #ممنوع
 
-👽آگاهی از آنلاین بودن ربات
+👽آنلاین بودن ربات
 #انلاینی
 
 ➖➖➖➖➖
