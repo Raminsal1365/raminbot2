@@ -347,7 +347,7 @@ tdcli_function ({
     user_id_ = data.sender_user_id_
   }, demote_cb, {chat_id=data.chat_id_,user_id=data.sender_user_id_})
   end
-    if cmd == "id" then
+    if cmd == "����" then
 local function id_cb(arg, data)
     return tdcli.sendMessage(arg.chat_id, "", 0, "*"..data.id_.."*", 0, "md")
 end
@@ -448,7 +448,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
     return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام مدیر گروه برکنار شد*", 0, "md")
    end
 end
-   if cmd == "id" then
+   if cmd == "����" then
     return tdcli.sendMessage(arg.chat_id, "", 0, "*"..data.id_.."*", 0, "md")
 end
     if cmd == "res" then
@@ -1492,7 +1492,7 @@ else
 end
 end
 
-local mute_gif = data[tostring(target)]["settings"]["mute_gif"] 
+local mute_gif = data[tostring(target)]["settings"]["قفل گیف"] 
 if mute_gif == "yes" then
 if not lang then
  return "🔇*Mute Gif* _Is Already Enabled_🔇"
@@ -1503,7 +1503,8 @@ else
  data[tostring(target)]["settings"]["mute_gif"] = "yes" 
 save_data(_config.moderation.data, data) 
 if not lang then 
- return "🔊*Mute Gif* _Has Been Enabled_🔊"
+ return "🔊*
+ * _Has Been Enabled_🔊"
 else
  return "🔊بیصدا کردن تصاویر متحرک فعال شد🔊"
 end
@@ -1521,7 +1522,7 @@ return "شما مدیر گروه نمیباشید"
 end
 end 
 
-local mute_gif = data[tostring(target)]["settings"]["mute_gif"]
+local mute_gif = data[tostring(target)]["settings"]["قفل گیف"]
  if mute_gif == "no" then
 if not lang then
 return "🔇*Mute Gif* _Is Already Disabled_🔇" 
@@ -2300,7 +2301,7 @@ local lang = redis:get(hash)
     local data = load_data(_config.moderation.data)
    local chat = msg.chat_id_
    local user = msg.sender_user_id_
-if matches[1] == "id" then
+if matches[1] == "����" then
 if not matches[2] and tonumber(msg.reply_to_message_id_) == 0 then
    if not lang then
 return "*Chat ID :* _"..chat.."_\n*User ID :* _"..user.."_"
@@ -2313,13 +2314,13 @@ if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
       ID = "GetMessage",
       chat_id_ = msg.chat_id_,
       message_id_ = msg.reply_to_message_id_
-    }, action_by_reply, {chat_id=msg.chat_id_,cmd="id"})
+    }, action_by_reply, {chat_id=msg.chat_id_,cmd="����"})
   end
 if matches[2] and tonumber(msg.reply_to_message_id_) == 0 then
    tdcli_function ({
       ID = "SearchPublicChat",
       username_ = matches[2]
-    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="id"})
+    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="����"})
       end
    end
 if matches[1] == "pin" and is_owner(msg) then
@@ -3088,7 +3089,7 @@ text3 = [[
 
 
 💬 ارسال گیف ممنوع
-🔇*!mute gif*
+🔇*!قفل گیف*
 🔊*!unmute gif*
 〰〰〰〰〰
 💬 ارسال عکس ممنوع
@@ -3391,8 +3392,8 @@ patterns ={
 "^[!/#](انلاینی)$",
 "^[!/#](ممنوع)$",
 "^[!/#](قفل)$",
-"^[!/#](id)$",
-"^[!/#](id) (.*)$",
+"^[!/#](����)$",
+"^[!/#](����) (.*)$",
 "^[!/#](pin)$",
 "^[!/#](unpin)$",
 "^[!/#](gpinfo)$",
